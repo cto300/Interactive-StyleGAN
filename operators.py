@@ -1,7 +1,7 @@
 import numpy as np
 import math
 import random
-from easygui import *
+#from easygui import *
 
 def crossover_matrix(variables, level, noise, indices):
 
