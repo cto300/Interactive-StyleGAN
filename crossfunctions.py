@@ -89,6 +89,8 @@ def cross_deepie(url, test, indices, variables, foreign, noise, count):
     for idx in range(images.shape[0]):
         # PIL.Image.fromarray(images[idx], 'RGB').save('Generation0/img%d.png' % idx)
         PIL.Image.fromarray(images[idx], 'RGB').save('Deepie/Test%d/%s/Generation%d/img%d.png' % (test, dataset, count, idx))
+        
+    count = count + 1
 
     return next_pop, count
 
