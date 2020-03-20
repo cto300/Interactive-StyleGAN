@@ -66,6 +66,8 @@ def init_deepie(url, test, rand = True, seeds = None):
 def cross_deepie(url, test, indices, variables, foreign, noise, count):
 #def cross_deepie(generator, test, indices, variables, foreign, noise, count):
 
+    # Generate image.
+    fmt = dict(func=tflib.convert_images_to_uint8, nchw_to_nhwc=True)
 
     tf.InteractiveSession()
 
