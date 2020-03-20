@@ -25,7 +25,8 @@ def init_deepie(generator, test, rand = True, seeds = None):
 
     if (rand == False):
         seeds=[639,701,687,615,2268,444,555,666,789,1092,6745,5653,4543,435,4345,45322,563,785,543,6785]
-        latents = np.stack(np.random.RandomState(seed).randn(Gs.input_shape[1]) for seed in seeds)
+        latents = np.stack(np.random.RandomState(seed).randn(generator.input_shape[1]) for seed in seeds)
+        #latents = np.stack(np.random.RandomState(seed).randn(Gs.input_shape[1]) for seed in seeds)
 
     else:
         #initialice random latents
