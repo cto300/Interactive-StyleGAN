@@ -20,7 +20,7 @@ def init_deepie(url, test, rand = True, seeds = None):
     tf.InteractiveSession()
 
     with dnnlib.util.open_url(url) as f:
-    _G, _D, Gs = pickle.load(f)
+        _G, _D, Gs = pickle.load(f)
 
     if (rand == False):
         seeds=[639,701,687,615,2268,444,555,666,789,1092,6745,5653,4543,435,4345,45322,563,785,543,6785]
@@ -76,7 +76,8 @@ def cross_deepie(url, test, indices, variables, foreign, noise, count):
     images = np.concatenate([images1, images2])
 
     #save images
-    os.mkdir("Deepie/Test%d/Generation%d" % (test, count))
+    if not os.path.exists("Deepie/Test%d/Generation%d" % (test, count)):
+        os.mkdir("Deepie/Test%d/Generation%d" % (test, count))
 
     for idx in range(images.shape[0]):
         # PIL.Image.fromarray(images[idx], 'RGB').save('Generation0/img%d.png' % idx)
