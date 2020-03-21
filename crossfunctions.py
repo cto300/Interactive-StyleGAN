@@ -381,10 +381,7 @@ def deepsie(generator, test, gen, latents, indices, foreign, noise):
 
         next_pop = np.zeros_like(variables)
         next_pop2 = np.zeros_like(variables)
-        print("next_pop.shape")
-        print(next_pop.shape)
-        print("next_pop")
-        print(next_pop)
+        
         #print("leveled_cross.shape")
         #print(leveled_cross.shape)
         #cross1 = np.random.choice(leveled_cross[0], 6, replace=False)
@@ -396,10 +393,7 @@ def deepsie(generator, test, gen, latents, indices, foreign, noise):
         #next_pop[range(12,19)] = cross1[range(0,5)]
 
         cross1 = leveled_cross[0]
-        print(" cross1 .shape")
-        print(cross1.shape)
-        print(" cross1 ")
-        print(next_pop)
+        
         cross2 = leveled_cross[1]
         cross3 = leveled_cross[2]
         cross4 = leveled_cross[3]
