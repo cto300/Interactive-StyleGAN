@@ -327,7 +327,7 @@ def deepsie(generator, test, gen, latents, indices, foreign, noise):
         if not os.path.exists("DeepSIE"):
             os.mkdir("DeepSIE")
 
-        if not os.path.exists("DeeSIE/Test%d" % test):
+        if not os.path.exists("DeepSIE/Test%d" % test):
             os.mkdir("DeepSIE/Test%d" % test)
 
         if not os.path.exists("DeepSIE/Test%d/selected" % test):
