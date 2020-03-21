@@ -325,7 +325,7 @@ def deepsie(generator, test, gen, latents, indices, foreign, noise):
         images = generator.components.synthesis.run(latents, randomize_noise=False, **synthesis_kwargs)
 
         if not os.path.exists("DeepSIE"):
-            os.mkdir("DeepsIE")
+            os.mkdir("DeepSIE")
 
         if not os.path.exists("DeeSIE/Test%d" % test):
             os.mkdir("DeepSIE/Test%d" % test)
