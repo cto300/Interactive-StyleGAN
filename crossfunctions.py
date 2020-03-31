@@ -287,7 +287,7 @@ def deepie(generator, test, gen, latents, indices, foreign, noise):
 
         # save selected images
         for idx in indices:
-            shutil.copy("Deepie/Test%d/Generation%d/img%d.png" % (test, gen - 1, idx), "Deepie/Test%d/selected" % test)
+            shutil.copy("Deepie/Test%d/Generation%d/img%d.png" % (test, gen - 1, idx), "Deepie/Test%d/selected_A" % test)
             old_file = os.path.join("Deepie/Test%d/selected_A" % (test), "img%d.png" % (idx))
             new_file = os.path.join("Deepie/Test%d/selected_A" % (test), "gen%d_img%d.png" % (gen -1, idx))
             os.rename(old_file, new_file)
@@ -444,7 +444,7 @@ def deepsie(generator, test, gen, latents, indices, foreign, noise):
 
         # save selected images
         for idx in indices:
-            shutil.copy("DeepSIE/Test%d/Generation%d/img%d.png" % (test, gen - 1, idx), "DeepSIE/Test%d/selected" % test)
+            shutil.copy("DeepSIE/Test%d/Generation%d/img%d.png" % (test, gen - 1, idx), "DeepSIE/Test%d/selected_B" % test)
             old_file = os.path.join("DeepSIE/Test%d/selected_B" % (test), "img%d.png" % (idx))
             new_file = os.path.join("DeepSIE/Test%d/selected_B" % (test), "gen%d_img%d.png" % (gen -1, idx))
             os.rename(old_file, new_file)
