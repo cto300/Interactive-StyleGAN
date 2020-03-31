@@ -265,8 +265,8 @@ def deepie(generator, test, gen, latents, indices, foreign, noise):
         if not os.path.exists("Deepie/Test%d" % test):
             os.mkdir("Deepie/Test%d" % test)
 
-        if not os.path.exists("Deepie/Test%d/selected" % test):
-                os.mkdir("Deepie/Test%d/selected" % test )
+        if not os.path.exists("Deepie/Test%d/selected_A" % test):
+                os.mkdir("Deepie/Test%d/selected_A" % test )
 
         if not os.path.exists("Deepie/Test%d/Generation%d" % (test, gen)):
                 os.mkdir("Deepie/Test%d/Generation%d" % (test, gen) )
@@ -288,8 +288,8 @@ def deepie(generator, test, gen, latents, indices, foreign, noise):
         # save selected images
         for idx in indices:
             shutil.copy("Deepie/Test%d/Generation%d/img%d.png" % (test, gen - 1, idx), "Deepie/Test%d/selected" % test)
-            old_file = os.path.join("Deepie/Test%d/selected" % (test), "img%d.png" % (idx))
-            new_file = os.path.join("Deepie/Test%d/selected" % (test), "gen%d_img%d.png" % (gen -1, idx))
+            old_file = os.path.join("Deepie/Test%d/selected_A" % (test), "img%d.png" % (idx))
+            new_file = os.path.join("Deepie/Test%d/selected_A" % (test), "gen%d_img%d.png" % (gen -1, idx))
             os.rename(old_file, new_file)
 
         l1 = next_pop[:len(next_pop) // 2]
@@ -344,8 +344,8 @@ def deepsie(generator, test, gen, latents, indices, foreign, noise):
         if not os.path.exists("DeepSIE/Test%d" % test):
             os.mkdir("DeepSIE/Test%d" % test)
 
-        if not os.path.exists("DeepSIE/Test%d/selected" % test):
-                os.mkdir("DeepSIE/Test%d/selected" % test )
+        if not os.path.exists("DeepSIE/Test%d/selected_B" % test):
+                os.mkdir("DeepSIE/Test%d/selected_B" % test )
 
         if not os.path.exists("DeepSIE/Test%d/Generation%d" % (test, gen)):
                 os.mkdir("DeepSIE/Test%d/Generation%d" % (test, gen) )
@@ -445,8 +445,8 @@ def deepsie(generator, test, gen, latents, indices, foreign, noise):
         # save selected images
         for idx in indices:
             shutil.copy("DeepSIE/Test%d/Generation%d/img%d.png" % (test, gen - 1, idx), "DeepSIE/Test%d/selected" % test)
-            old_file = os.path.join("DeepSIE/Test%d/selected" % (test), "img%d.png" % (idx))
-            new_file = os.path.join("DeepSIE/Test%d/selected" % (test), "gen%d_img%d.png" % (gen -1, idx))
+            old_file = os.path.join("DeepSIE/Test%d/selected_B" % (test), "img%d.png" % (idx))
+            new_file = os.path.join("DeepSIE/Test%d/selected_B" % (test), "gen%d_img%d.png" % (gen -1, idx))
             os.rename(old_file, new_file)
 
         images = generator.components.synthesis.run(next_pop, randomize_noise=False, **synthesis_kwargs)
