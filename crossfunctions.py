@@ -315,7 +315,7 @@ def deepie(generator, test, gen, latents, indices, foreign, noise):
             ab['var1'] = names
             ab['var2'] = values
 
-            file_name = 'Deepie/Test%d/selected/log%d.csv' % (test, gen)
+            file_name = 'Deepie/Test%d/selected_A/log%d.csv' % (test, gen)
 
             #np.savetxt(file_name, ab, fmt="%10s %10.3f")
             np.savetxt(file_name, ab, fmt='%s', delimiter=',')
@@ -469,7 +469,7 @@ def deepsie(generator, test, gen, latents, indices, foreign, noise):
             ab['var1'] = names
             ab['var2'] = values
 
-            file_name = 'DeepSIE/Test%d/selected/log%d.csv' % (test, gen)
+            file_name = 'DeepSIE/Test%d/selected_B/log%d.csv' % (test, gen)
 
             #np.savetxt(file_name, ab, fmt="%10s %10.3f")
             np.savetxt(file_name, ab, fmt='%s', delimiter=',')
